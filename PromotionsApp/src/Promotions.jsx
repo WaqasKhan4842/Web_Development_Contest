@@ -11,6 +11,14 @@ const Promotions = () => {
 
   const maxItemsPerView = 5;
 
+  // Function to check if the promotion is active (between start and end date)
+  const isPromotionActive = (startDate, endDate) => {
+    const currentDate = new Date();
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+    return currentDate >= start && currentDate <= end;
+  };
+
   const handleNext = (category) => {
     setCarouselIndex((prev) => ({
       ...prev,
@@ -42,6 +50,19 @@ const Promotions = () => {
               <img src={promo.image} alt={promo.title} className="promotion-image" />
               <h3>{promo.title}</h3>
               <p>{promo.description}</p>
+              <p>
+                <strong>Start Date:</strong> {promo.startDate}
+              </p>
+              <p>
+                <strong>End Date:</strong> {promo.endDate}
+              </p>
+              {/* Show sign-up button if the promotion is active */}
+              <button
+                disabled={!isPromotionActive(promo.startDate, promo.endDate)}
+                className={`signup-btn ${!isPromotionActive(promo.startDate, promo.endDate) ? 'disabled' : ''}`}
+              >
+                {isPromotionActive(promo.startDate, promo.endDate) ? 'Sign Up' : 'Expired or Not Started'}
+              </button>
             </div>
           ))}
         </div>
