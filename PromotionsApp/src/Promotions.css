@@ -1,6 +1,9 @@
 .promotions-container {
     margin: 20px;
     font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
   }
   
   .promotions-section {
@@ -14,24 +17,63 @@
   
   .carousel {
     display: flex;
+    gap: 15px;
     overflow: hidden;
     width: 100%;
+    padding: 10px;
   }
   
   .promotion-card {
     min-width: 18%;
     margin: 0 10px;
-    background: #fff;
+    background: linear-gradient(145deg, #fdfdfd, #e1e1e1);
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 4px 4px 10px #d1d1d1, -4px -4px 10px #ffffff;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .promotion-card:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 12px #c1c1c1, -6px -6px 12px #ffffff;
   }
   
   .promotion-card img {
-    width: 100%;
-    height: auto;
+    display: none; /* Hide the image */
+  }
+  
+  .promotion-card-header {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    background: #0099ff;
+    color: #ffffff;
     border-radius: 8px 8px 0 0;
+  }
+  
+  .promotion-card p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #333333;
+  }
+  
+  .signup-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .signup-btn.disabled {
+    background: #ccc;
+    cursor: not-allowed;
   }
   
   .arrow {
@@ -40,6 +82,7 @@
     font-size: 24px;
     cursor: pointer;
     color: #333;
+    transition: color 0.2s;
   }
   
   .arrow.left {
@@ -48,5 +91,122 @@
   
   .arrow.right {
     margin-left: 10px;
+  }
+  
+  .arrow:hover {
+    color: #000;
+  }
+  
+  .promotions-container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .main-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  
+  .promotions-section {
+    margin-bottom: 30px;
+  }
+  
+  .section-heading {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+  
+  .carousel-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  .carousel {
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .promotion-card {
+    min-width: 18%;
+    margin: 0 10px;
+    background: linear-gradient(145deg, #fdfdfd, #e1e1e1);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 4px 4px 10px #d1d1d1, -4px -4px 10px #ffffff;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .promotion-card:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 12px #c1c1c1, -6px -6px 12px #ffffff;
+  }
+  
+  .promotion-card-header {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    background: #ff6347;
+    color: #ffffff;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .promotion-card p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #333333;
+  }
+  
+  .subscribe-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .subscribe-btn.disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .arrow {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s;
+  }
+  
+  .arrow.left {
+    margin-right: 10px;
+  }
+  
+  .arrow.right {
+    margin-left: 10px;
+  }
+  
+  .arrow:hover {
+    color: #000;
   }
   

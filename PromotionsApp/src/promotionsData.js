@@ -4,7 +4,7 @@ const promotionsData = {
       id: 1,
       title: "50% off on Blockbusters",
       description: "Enjoy half-price tickets for top movies this weekend.",
-      image: "assets/promotions-1.png", // Updated image path
+      image: "./assets/promotions-1.png", // Updated image path
       startDate: "2024-11-17",
       endDate: "2024-11-19",
     },
@@ -12,7 +12,7 @@ const promotionsData = {
       id: 2,
       title: "Unlimited Movie Nights",
       description: "Monthly subscription for unlimited streaming.",
-      image: "assets/promotions-2.png", // Updated image path
+      image: "./assets/promotions-2.png", // Updated image path
       startDate: "2024-11-01",
       endDate: "2024-11-30",
     },
@@ -20,7 +20,7 @@ const promotionsData = {
       id: 3,
       title: "Cinema Bonanza",
       description: "Free popcorn with every ticket.",
-      image: "assets/promotions-3.png", // Updated image path
+      image: "./assets/promotions-3.png", // Updated image path
       startDate: "2024-11-10",
       endDate: "2024-11-15",
     },
@@ -28,7 +28,7 @@ const promotionsData = {
       id: 4,
       title: "Kids Movie Night",
       description: "Special discounts on family tickets.",
-      image: "assets/promotions-4.png", // Updated image path
+      image: "./assets/promotions-4.png", // Updated image path
       startDate: "2024-11-18",
       endDate: "2024-11-22",
     },
@@ -36,7 +36,7 @@ const promotionsData = {
       id: 5,
       title: "Premiere Access",
       description: "Exclusive early access to blockbuster premieres.",
-      image: "assets/promotions-5.png", // Updated image path
+      image: "./assets/promotions-5.png", // Updated image path
       startDate: "2024-11-20",
       endDate: "2024-11-30",
     },
@@ -44,7 +44,7 @@ const promotionsData = {
       id: 6,
       title: "Holiday Movie Specials",
       description: "Discounted tickets for holiday releases.",
-      image: "assets/promotions-1.png", // Reset to image 1
+      image: "./assets/promotions-1.png", // Reset to image 1
       startDate: "2024-12-01",
       endDate: "2024-12-25",
     },
@@ -52,7 +52,7 @@ const promotionsData = {
       id: 7,
       title: "Classic Movie Marathons",
       description: "Relive the classics with marathon screenings.",
-      image: "assets/promotions-2.png", // Reset to image 2
+      image: "./assets/promotions-2.png", // Reset to image 2
       startDate: "2024-11-25",
       endDate: "2024-11-30",
     },
@@ -60,7 +60,7 @@ const promotionsData = {
       id: 8,
       title: "Documentary Week",
       description: "Explore knowledge with documentary specials.",
-      image: "assets/promotions-3.png", // Reset to image 3
+      image: "./assets/promotions-3.png", // Reset to image 3
       startDate: "2024-11-01",
       endDate: "2024-11-07",
     },
@@ -68,7 +68,7 @@ const promotionsData = {
       id: 9,
       title: "Indie Movie Festival",
       description: "Support indie filmmakers with festival screenings.",
-      image: "assets/promotions-4.png", // Reset to image 4
+      image: "./assets/promotions-4.png", // Reset to image 4
       startDate: "2024-11-15",
       endDate: "2024-11-17",
     },
@@ -76,7 +76,7 @@ const promotionsData = {
       id: 10,
       title: "Superhero Saturdays",
       description: "Catch superhero classics every Saturday.",
-      image: "assets/promotions-5.png", // Reset to image 5
+      image: "./assets/promotions-5.png", // Reset to image 5
       startDate: "2024-11-01",
       endDate: "2024-11-30",
     },
