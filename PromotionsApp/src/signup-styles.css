@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    margin-left: 20px;
+}
+.welcome--msg{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+      text-align: left;
+      font-size: 2rem;
+}
+.information-msg{
+    
+}
+ul{
+    text-align: left;
+    /* margin-left: 20px; */
+}
