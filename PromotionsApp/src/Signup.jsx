@@ -1,5 +1,9 @@
 import React from 'react';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
+import "./signup-styles.css";
+import flight from './assets/flight.jpeg';
+import event from './assets/event.jpeg';
+import movie from './assets/movie.jpeg';
 
 export default function Signup() {
   const responseGoogle = (response) => {
@@ -25,23 +29,17 @@ export default function Signup() {
       <div className="container mt-5">
         <div className="row">
           <div className="col-lg-8 col-md-10 col-sm-12 text-center">
-            <h1 className="welcome--msg">Welcome to One Platform, Endless Possibilities👋</h1>
+            <h1 className="title">Ti<span className='element--k'>k</span>ify<span className='ticket'> 🎫</span></h1>
+            <h2 className="welcome--msg">Welcome to One Platform, Endless Possibilities👋</h2>
             <p className="information--msg">
               Join us and simplify your booking experience with access to everything in one place – from movies and events to flights, all at your fingertips.
             </p>
-            <ul className="list-unstyled mt-4">
-              <li>✔️ Book movies, events, and flights with ease.</li>
-              <li>✔️ Enjoy exclusive discounts and offers.</li>
-              <li>✔️ Get personalized recommendations for your interests.</li>
-              <li>✔️ Manage all your bookings in one place.</li>
-            </ul>
-
             <h2 className="mt-5">Sign Up Now and Experience the Future of Booking!</h2>
 
             <div className="social-login-buttons mt-4">
               <GoogleLogin
                 onSuccess={responseGoogle}  // Success handler
-                onError={() => console.error('Login Failed')}
+                onError={failureGoogle}  // Error handler
               />
             </div>
 
@@ -65,6 +63,32 @@ export default function Signup() {
             <p className="mt-4">Already have an account?</p>
             <button className="btn btn-link">Log in here</button>
           </div>
+
+          {/* Right Column with Carousel of Images */}
+          <div className="col-lg-4 col-md-2 col-sm-12">
+            <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel" data-bs-interval="100">
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img src={flight} className="d-block w-100 carousel-image" alt="Flight" />
+                </div>
+                <div className="carousel-item">
+                  <img src={event} className="d-block w-100 carousel-image" alt="Event" />
+                </div>
+                <div className="carousel-item">
+                  <img src={movie} className="d-block w-100 carousel-image" alt="Movie" />
+                </div>
+              </div>
+              <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
         </div>
       </div>
     </GoogleOAuthProvider>

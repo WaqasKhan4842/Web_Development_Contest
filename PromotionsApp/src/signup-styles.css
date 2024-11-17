@@ -3,21 +3,146 @@
 }
 .container{
     margin-left: 20px;
+    background-color: white;
+    border-radius:2%
 }
-.welcome--msg{
+/* Styling for the welcome message */
+.welcome--msg {
     font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: bold;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-      text-align: left;
-      font-size: 2rem;
-}
-.information-msg{
-    
-}
+    text-align: left;
+    font-size: 2rem;
+    font-variation-settings: "wdth" 100;
+    color: black; /* White color for text */
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Gradient background */
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: fadeInLeft 2s ease-out, textGlow 1.5s ease-in-out infinite alternate;
+    /* Add a semi-transparent background or shadow for better visibility */
+    background-color: rgba(0, 0, 0, 0.2); /* Optional for contrast */
+    padding: 5px 10px;
+    border-radius: 8px;
+  }
+  
+  /* Keyframes for text glow effect */
+  @keyframes textGlow {
+    0% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.4);
+    }
+    100% {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 15px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+  }
+  
+  /* Keyframes for sliding animation */
+  @keyframes fadeInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+
+
 ul{
     text-align: left;
-    /* margin-left: 20px; */
+    
 }
+body{
+    /* color:black; */
+}
+.title{
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+}
+.element--k{
+    font-size:4rem;
+    color: red;
+}
+.ticket {
+    width: 60px; /* Increased width for better visibility */
+    height: 30px; /* Adjusted height to maintain a balanced ratio */
+    display: inline-block;
+    background-color: #ff6347; /* A vibrant color (tomato red) for the ticker */
+    transform: rotate(45deg); /* Rotate by 45 degrees */
+    transform-origin: center; /* Ensures it rotates around the center */
+    border-radius: 10px; /* Rounded corners for a soft look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    position: relative;
+    animation: ticketAnimation 2s ease-in-out infinite; /* Smooth animation */
+  }
+  
+  /* Animation for the ticker */
+  @keyframes ticketAnimation {
+    0% {
+      transform: rotate(45deg) translateY(0);
+    }
+    50% {
+      transform: rotate(45deg) translateY(-10px); /* Slight upward movement */
+    }
+    100% {
+      transform: rotate(45deg) translateY(0);
+    }
+  }
+  
+  /* Adding a decorative shine or gradient effect */
+  .ticket::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+    border-radius: 5px;
+    transform: rotate(45deg); /* Match the rotation of the ticket */
+  }
+
+  
+  .information--msg {
+    font-family: 'Lora', serif; /* A more elegant serif font */
+    font-size: 1.2rem; /* Slightly larger font size for readability */
+    line-height: 1.6; /* Improve line spacing for better readability */
+    color: #333; /* Dark text color for readability */
+    max-width: 800px; /* Limit width for better readability on larger screens */
+    margin: 20px auto; /* Center the text with space on top and bottom */
+    text-align: center; /* Center-align the text */
+    padding: 0 20px; /* Add some horizontal padding */
+    opacity: 0; /* Initially hidden for animation */
+    animation: fadeIn 2s ease-in-out forwards; /* Smooth fade-in animation */
+  }
+  
+  /* Animation for fade-in effect */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Slight upward movement from below */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* End position */
+    }
+  }
+  
+  /* Optional: Add a subtle text shadow for extra depth */
+  .information--msg {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carousel-image {
+    height: 100vh; /* Set a fixed height */
+    object-fit: cover; /* Ensure the images are cropped to fit the box */
+    width: 100%; /* Ensure the image takes the full width of the container */
+    margin-left:
+  }
+  
+  
