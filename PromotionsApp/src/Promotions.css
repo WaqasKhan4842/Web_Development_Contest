@@ -1,0 +1,52 @@
+.promotions-container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .promotions-section {
+    margin-bottom: 30px;
+  }
+  
+  .carousel-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .promotion-card {
+    min-width: 18%;
+    margin: 0 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .promotion-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .arrow {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .arrow.left {
+    margin-right: 10px;
+  }
+  
+  .arrow.right {
+    margin-left: 10px;
+  }
+  

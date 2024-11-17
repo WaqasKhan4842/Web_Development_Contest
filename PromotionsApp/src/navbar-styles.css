@@ -1,0 +1,107 @@
+/* Apply box-sizing globally */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Ensure the navbar covers the full width */
+  .navbar {
+    width: 100% !important;
+    position: fixed; /* Keeps the navbar at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures the navbar stays on top of other content */
+    height: 70px; /* Adjusted height for better visual balance */
+    padding: 10px 20px; /* Reduced padding to create a more compact design */
+    
+    /* Frosted glass effect */
+    background: rgba(26, 26, 26, 0.7); /* Transparent dark background */
+    backdrop-filter: blur(8px); /* Subtle blur effect */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    transition: background 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  /* Change navbar background color on hover */
+  .navbar:hover {
+    background: rgba(26, 26, 26, 0.9); /* Darker background on hover */
+  }
+  
+  /* Prevent content overlap with the fixed navbar */
+  body {
+    padding-top: 70px; /* Ensures content doesn't get hidden by the navbar */
+    font-family: 'Arial', sans-serif; /* Set a clean, modern font */
+    background-color: #f8f9fa; /* Lighter background for the body */
+  }
+  
+  /* Customizing the navbar brand/logo */
+  .navbar-brand {
+    color: #ffffff !important; /* White text for the brand */
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Adds a more modern look */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .navbar-brand:hover {
+    color: #ff6f61 !important; /* Add hover effect with a vibrant color */
+    text-decoration: none;
+  }
+  
+  /* Navbar items and flexbox for even spacing */
+  .navbar-nav {
+    display: flex;
+    justify-content: space-between; /* Evenly spaces out the items */
+    width: 100%; /* Ensures that the items span the entire width */
+    align-items: center; /* Vertically centers the navbar items */
+  }
+  
+  /* Customize individual navbar items */
+  .navbar-nav .nav-item {
+    flex: 1; /* Each item takes up an equal amount of space */
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    color:black !important; /* White text for navbar items */
+    font-size: 16px;
+    font-weight: 500; /* Slightly bolder for better readability */
+    padding: 12px 15px;
+    text-align: center;
+    text-transform: capitalize;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
+    font-weight: bold;
+    border-radius: 5px; /* Rounded corners for a more refined look */
+  }
+  
+  /* Hover effect for navbar items */
+  .navbar-nav .nav-item .nav-link:hover {
+    background-color: #ff6f61; /* Soft hover background color */
+    color: #ffffff !important; /* Ensures text remains white on hover */
+    transform: scale(1.05); /* Slight zoom-in effect */
+  }
+  
+  /* Toggler button customization for mobile */
+  .navbar-toggler {
+    border: 1px solid #ff6f61; /* Red border for the toggler */
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #ff6f61; /* Vibrant color for the toggler icon */
+  }
+  
+  /* Make the navbar look better on smaller screens */
+  @media (max-width: 768px) {
+    .navbar-nav {
+      justify-content: space-around; /* Adjust the spacing for smaller screens */
+    }
+  
+    .navbar-nav .nav-item .nav-link {
+      font-size: 14px; /* Smaller font size for mobile */
+      padding: 10px 8px; /* Adjust padding for smaller screens */
+    }
+  
+    .navbar {
+      padding: 10px; /* Reduce the navbar padding on mobile */
+    }
+  }
+  

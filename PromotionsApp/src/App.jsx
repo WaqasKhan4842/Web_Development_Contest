@@ -1,20 +1,30 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Signup from './Signup'
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './Navbar';
+import Signup from './Signup';
+import Promotions from './Promotions';
+// import BookMovie from './BookMovie';
+// import BookFlight from './BookFlight';
+// import BookEvent from './BookEvent';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <>
-    <Signup />
-      
-    </>
-  )
+    <Router>  {/* Make sure Router wraps the whole app */}
+      <Navbar />
+      <div className="container mt-4">
+        <Routes>
+          <Route path="/promotions" element={<Promotions />}/>
+          {/* <Route path="/book-movie" element={<BookMovie />} />
+          <Route path="/book-flight" element={<BookFlight />} />
+          <Route path="/book-event" element={<BookEvent />} />  */}
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
 
 
